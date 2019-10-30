@@ -37,9 +37,9 @@ if (typeof inputSrc === 'undefined') {
 }
 
 function convert2gif (pngFile, targetDir) {
-  log(`讀取 => ${pngFile}`)
+  log(Y()`import file from ${pngFile}`)
   if (path.extname(pngFile) != '.png') {
-    log(`${pngFile} 檔案類型不符`)
+    log(Y()`${pngFile} file type invalid`)
     return;
   }
 
@@ -47,9 +47,9 @@ function convert2gif (pngFile, targetDir) {
   const outputFile = targetDir ?
     path.join(targetDir, `${filename}.gif`) : path.join(currentDir, `${filename}.gif`);
 
-  log(`輸出 => ${outputFile}`)
+  log(Y()`export to ${outputFile}`)
   apng2gif(pngFile, outputFile).catch(e => {
-    log(`apng2gif error => ${e}`, 'error')
+    log(`apng2gif error: ${e}`, 'error')
   })
 }
 
@@ -58,4 +58,8 @@ function log() {
   args[0] = (args[1] === 'error' ? `[${pkgName}] `.red : `[${pkgName}] `.blue) + args[0];
   args = args.slice(0, 1);
   console.log.apply(console, args);
+}
+
+function Y() {
+  return require('./lib/y18n');
 }

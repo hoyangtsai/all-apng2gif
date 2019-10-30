@@ -1,29 +1,29 @@
 # all-apng2gif
 
-批量轉換 apng 圖片成 gif 圖片
+Batch convert apng images to gif images
 
-## 安裝
+## Install
 
 ```bash
 npm install -g all-apng2gif
 ```
 
-## 使用
+## Usage
 
-### 方法一
+### Method 1
 ```bash
-# 變更至 apng 圖片目錄
+# change directory to apng folder
 cd [apng_dir]
-# 執行 oapng2gif，目錄下所有 png 檔案會批量轉換 gif 檔案
+# execute oapng2gif, all of the png files converted to gif files within the folder
 oapng2gif
 ```
 
-### 方法二
+### Method 2
 ```bash
-# oapng2gif 後面帶上的圖片路徑，批量轉換成 gif 檔案輸出到來源目錄位置
+# oapng2gif tailing image paths afterward, serializing converting gif files to the source directory
 oapng2gif [apng_source1] [apng_source2] [...]
 ```
 
 ## Roadmap
 
-- electron 桌面應用
+- Electron desktop application

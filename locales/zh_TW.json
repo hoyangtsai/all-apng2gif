@@ -1,0 +1,5 @@
+{
+  "import file from %s": "從 %s 輸入檔案",
+  "%s file type invalid": "${pngFile} 檔案類型不符合",
+  "export to %s": "匯出至 %s"
+}
