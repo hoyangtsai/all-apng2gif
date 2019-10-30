@@ -1,0 +1,34 @@
+{
+  "name": "all-apng2gif",
+  "version": "1.0.0",
+  "description": "all input apngs convert to gif",
+  "main": "index.js",
+  "bin": {
+    "oapng2gif": "./bin/oapng2gif"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyangtsai/all-apng2gif.git"
+  },
+  "keywords": [
+    "apng2gif",
+    "apng-to-gif",
+    "line",
+    "sticker"
+  ],
+  "author": "hoyangtsai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyangtsai/all-apng2gif/issues"
+  },
+  "homepage": "https://github.com/hoyangtsai/all-apng2gif#readme",
+  "dependencies": {
+    "apng2gif": "^1.7.0",
+    "colors": "^1.4.0",
+    "commander": "^3.0.2",
+    "glob": "^7.1.5"
+  }
+}
