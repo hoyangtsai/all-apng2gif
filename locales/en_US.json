@@ -1,5 +1,5 @@
 {
-  "import file from %s": "import file from %s",
+  "import %s": "import %s",
   "%s file type invalid": "%s file type invalid",
   "export to %s": "export to %s"
 }

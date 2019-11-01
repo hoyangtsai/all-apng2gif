@@ -20,7 +20,7 @@ oapng2gif
 
 ### Method 2
 ```bash
-# oapng2gif tailing image paths afterward, serializing converting gif files to the source directory
+# oapng2gif tailing with image paths afterward, serializing converting gif files to the source directory
 oapng2gif [apng_source1] [apng_source2] [...]
 ```
 

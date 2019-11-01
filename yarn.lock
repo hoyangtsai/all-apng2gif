@@ -14,17 +14,10 @@ ansi-styles@^3.2.0:
   dependencies:
     color-convert "^1.9.0"
 
-apng2gif-bin@1.7.1:
+apng2gif-bin@^1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/apng2gif-bin/-/apng2gif-bin-1.7.1.tgz#2aee148e26ef943735016bbc0d608e1aeb6ea645"
   integrity sha512-Zg+KnNIDoMepSJ07d5PDOhNfx+k85iv0hCD8PEvjIeoIzpemHl2JkvN/88YRrnFBJ6DyFLpRlv/+EjnmNKWnLg==
-
-apng2gif@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/apng2gif/-/apng2gif-1.7.0.tgz#68e73612d98b1b775e2623a708a5f9cecbb09958"
-  integrity sha512-trKFmDpI+ZdHUPhotrqsvWTd4MUlAoMBcGLm3xrUJKPeFGputSRkeG8Z1z4koQ56eqiugA22aKokgex606oPZg==
-  dependencies:
-    apng2gif-bin "1.7.1"
 
 balanced-match@^1.0.0:
   version "1.0.0"

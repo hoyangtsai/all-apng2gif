@@ -1,6 +1,6 @@
 {
   "name": "all-apng2gif",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "all input apngs convert to gif",
   "main": "index.js",
   "bin": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/hoyangtsai/all-apng2gif#readme",
   "dependencies": {
-    "apng2gif": "^1.7.0",
+    "apng2gif-bin": "^1.7.1",
     "colors": "^1.4.0",
     "commander": "^3.0.2",
     "glob": "^7.1.5",
