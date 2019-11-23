@@ -1,5 +1,5 @@
 {
-  "name": "all-apng2gif",
+  "name": "@hoyangtsai/all-apng2gif",
   "version": "1.0.2",
   "description": "all input apngs convert to gif",
   "main": "index.js",
