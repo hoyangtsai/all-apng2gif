@@ -11,6 +11,7 @@ npm install -g all-apng2gif
 ## Usage
 
 ### Method 1
+
 ```bash
 # change directory to apng folder
 cd [apng_dir]
@@ -24,6 +25,7 @@ oapng2gif
 oapng2gif [apng_source1] [apng_source2] [...]
 ```
 
-## Roadmap
+## To-do
 
 - Electron desktop application
+- iOS shortcut integration
