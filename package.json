@@ -4,7 +4,8 @@
   "description": "all input apngs convert to gif",
   "main": "index.js",
   "bin": {
-    "oapng2gif": "./bin/oapng2gif"
+    "oapng2gif": "./bin/oapng2gif",
+    "apng2gif": "./bin/oapng2gif"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
