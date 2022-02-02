@@ -1,6 +1,6 @@
 {
   "name": "all-apng2gif",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "all input apngs convert to gif",
   "main": "index.js",
   "bin": {
