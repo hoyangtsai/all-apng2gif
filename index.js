@@ -2,6 +2,7 @@ const pkg = require('./package.json');
 const program = require('commander');
 const glob = require('glob');
 const path = require('path');
+const fs = require('fs');
 const { spawn } = require('child_process');
 const apng2gifBin = require('apng2gif-bin');
 
@@ -12,32 +13,42 @@ const currentDir = process.cwd();
 
 program
   .version(pkg.version)
-  .arguments('<source> [otherSource...]')
-  .action(function(source, otherSource) {
-    srcVal = source;
-    otherSrcVal = otherSource;
-    convert2gif(source);
-    otherSource.forEach(file => {
-      convert2gif(file);
-    })
+  .arguments('[source...]', 'source to be processed', (source, acc) => [...acc, source], [])
+  .action((source) => {
+    if (Array.isArray(source)) {
+      if (source.length > 0) {
+        source.forEach((dir) => {
+          const dirStat = fs.lstatSync(dir);
+          if (dirStat.isDirectory()) {
+            convertImagesFromDir(source);
+          } else if (dirStat.isFile()) {
+            convert2gif(source);
+          }
+        })
+      } else {
+        convertImagesFromDir(currentDir);
+      }
+    }
   })
   .parse(process.argv)
 
-if (typeof srcVal === 'undefined') {
-  const lookup = path.join(currentDir, '*.png');
+function convertImagesFromDir(dir) {
+  const lookup = path.join(dir, '*.png');
+  let images = [];
   try {
-    const matches = glob.sync(lookup);
-    matches.forEach(file => {
-      convert2gif(file);
-    })
-  } catch (error) {
-    log(`${error}`, 'error')
+    images = glob.sync(lookup);
+  } catch (err) {
+    log(`${error}`, 'error');
   }
+
+  images.forEach(async (image) => {
+    await convert2gif(image);
+  });
 }
 
 function convert2gif(pngFile) {
   log(Y()`import ${pngFile}`)
-  if (path.extname(pngFile) != '.png') {
+  if (path.extname(pngFile) !== '.png') {
     log(Y()`${pngFile} file type invalid`)
     return;
   }
