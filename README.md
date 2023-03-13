@@ -27,5 +27,5 @@ oapng2gif [apng_source1] [apng_source2] [...]
 
 ## To-do
 
-- Electron desktop application
+- Desktop application
 - iOS shortcut integration
